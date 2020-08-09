@@ -15,13 +15,16 @@ repositories {
 // 패키지 다운 명령
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	// 타임리프 템플릿 엔진(View)
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// spring-boot-starter-tomcat : 톰캣(웹서버) 내장
+	// spring-webmvc : 스프링 웹 MVC
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
-
+	// 스프링부트 + 스프링 코어 + 로깅(공통)
+	// junit : 테스트 프레임워크, mockito : 목 라이브러
 }
-// thymeleaf : template 엔진, web 프로젝트 선택했던 것
 
 test {
 	useJUnitPlatform()
